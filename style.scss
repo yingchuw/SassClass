@@ -7,6 +7,9 @@ $title:(
 "h2": 30px,
 "h3": 18px,
 ); //map
+$fontfamily: Arial; 
+
+$null: null;
 
 /* css 註解 */
 // 打//不會連動到css
@@ -16,7 +19,7 @@ color: $fontColor;
 background-color: $bgc;
 font-size: $fontsize;
 font-weight: bold;
-font-family: Arial, Helvetica, sans-serif;
+font-family: $fontfamily;
 margin: $margin;
 }
 
@@ -35,4 +38,77 @@ h2{
 
 h3{
     font-size: map-get($title, h3);
+}
+
+//區域變數
+$a : 10px;
+span{
+    $a: 20px;
+    font-size: $a;
+    $b: 30px !global; //提升成全域變數
+}
+
+$c: 30px;
+$c: 40px !default; //感變權重, 會吃到這個屬性
+
+
+// 字串轉型
+$class : ".space";
+$path : "assets";
+$attr : "padding";
+
+#{class} {
+    width : 100%;
+    background-image : url('#{path}/image.jpg');
+    #{$attr}: 10px;
+}
+
+.var {
+    width: 10 + 10px;
+    height: 20 - 10px;
+    margin: 10 * 10px;
+    font: (100 / 10); //除法注意, 要有()
+
+}
+
+$theme : 1400px;
+
+// 判斷式 if/else/else if
+.wrapper {
+    @if $theme == full{
+        width: 100%;
+    }@else{
+        width: $theme;
+        margin: 0 auto;
+    }
+}
+
+$width : 500px;
+
+.wrapper{
+    @if $width >= 1200 {
+        font-size: 18px;
+    }@else if $width < 1200 and $width >= 768{
+        font-size: 20px;
+    }@else{
+        font-size: 24px;
+    }
+}
+
+$btn_bg: #8c8c8c;
+$btn_font: #1c1c1c;
+
+.btn{
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: $btn_bg;
+    color: #1c1c1c;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: darken($btn_bg, 50); //顏色内建
+    color: lighten($btn_font, 10);
+
 }

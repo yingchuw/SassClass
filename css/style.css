@@ -7,7 +7,7 @@ body {
   background-color: #1c1c1c;
   font-size: 20px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   margin: 0 auto;
 }
 
@@ -26,5 +26,45 @@ h2 {
 
 h3 {
   font-size: 18px;
+}
+
+span {
+  font-size: 20px;
+}
+
+class {
+  width: 100%;
+  background-image: url("path/image.jpg");
+  padding: 10px;
+}
+
+.var {
+  width: 20px;
+  height: 10px;
+  margin: 100px;
+  font: 10;
+}
+
+.wrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  font-size: 24px;
+}
+
+.btn {
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  background-color: #8c8c8c;
+  color: #1c1c1c;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0d0d0d;
+  color: #363636;
 }
 /*# sourceMappingURL=style.css.map */
