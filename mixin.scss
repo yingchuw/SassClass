@@ -29,9 +29,17 @@
     body{
         background-color: $bgc;
         font-size: 16px;
+        @content; //可以塞屬性跟class的寫法
     }
 }
 
-@include body();
+@include body(){
+    h1{
+        font-size: 36px; //有放 @content才可以這樣寫
+    }
+    h2{
+        font-size: 20px;
+    }
+};
 @include body(black);
 
