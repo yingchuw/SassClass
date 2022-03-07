@@ -1,0 +1,37 @@
+//宣告 function name
+@mixin marginAuto($w, $top:0) {
+    margin: $top auto 0;
+    width: $w;
+}
+
+//可以沒有()
+@mixin yellow {
+    background-color: yellowgreen;
+    color: darkgreen;
+}
+
+//調用
+.box{
+    @include marginAuto(300px, 10px);
+    @include yellow;
+}
+
+.box2{
+    @include marginAuto(600px);
+}
+
+.box3{
+    @include marginAuto(500px);
+
+}
+
+@mixin body($bgc: #fff){
+    body{
+        background-color: $bgc;
+        font-size: 16px;
+    }
+}
+
+@include body();
+@include body(black);
+

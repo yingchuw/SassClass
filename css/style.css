@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* css 註解 */
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: whitesmoke;
   background-color: #1c1c1c;
   font-size: 20px;
@@ -60,20 +61,26 @@ class {
   background-color: #8c8c8c;
   color: #737373;
   cursor: pointer;
-  transition: 0.3s all ease;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
+
 .btn:hover {
   background-color: #a6a6a6;
 }
+
 .btn::after {
-  content: "";
+  content: '';
 }
+
 .btn--error {
   background-color: red;
 }
+
 .btn--warning {
   background-color: purple;
 }
+
 .btn--warning:hover {
   background-color: aquamarine;
 }
@@ -81,6 +88,7 @@ class {
 a a:hover {
   color: #ad0026;
 }
+
 a:active {
   color: #6ec807;
 }
@@ -92,11 +100,12 @@ section .wrapper h1 {
 .container section .wrapper h1 {
   font-size: 20px;
 }
+
 .container section .wrapper h2 {
   font-size: 40px;
 }
+
 .container section .wrapper h3 {
   font-size: 60px;
 }
-
 /*# sourceMappingURL=style.css.map */
