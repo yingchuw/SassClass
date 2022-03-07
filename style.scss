@@ -1,0 +1,38 @@
+$fontsize: 20px; //變數宣告
+$bgc: #1c1c1c;
+$fontColor: whitesmoke;
+$margin: 0 auto;
+$title:(
+"h1": 46px,
+"h2": 30px,
+"h3": 18px,
+); //map
+
+/* css 註解 */
+// 打//不會連動到css
+body{
+box-sizing: border-box; 
+color: $fontColor;
+background-color: $bgc;
+font-size: $fontsize;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+margin: $margin;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: $margin;
+}
+
+h1{
+    font-size: map-get($title, h1);
+}
+
+h2{
+    font-size: map-get($title, h2);
+}
+
+h3{
+    font-size: map-get($title, h3);
+}
