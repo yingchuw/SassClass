@@ -1,15 +1,4 @@
-$fontsize: 20px; //變數宣告
-$bgc: #1c1c1c;
-$fontColor: whitesmoke;
-$margin: 0 auto;
-$title:(
-"h1": 46px,
-"h2": 30px,
-"h3": 18px,
-); //map
-$fontfamily: Arial; 
-
-$null: null;
+@import 'var.scss';
 
 /* css 註解 */
 // 打//不會連動到css
