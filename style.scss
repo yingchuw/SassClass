@@ -103,12 +103,62 @@ $btn_font: #1c1c1c;
     padding: 20px;
     text-align: center;
     background-color: $btn_bg;
-    color: #1c1c1c;
+    // color: #1c1c1c;
+    color: invert($btn_bg); //反轉
     cursor: pointer;
+    transition: .3s all ease;
+    &:hover{
+        background-color: lighten($btn_bg, 10);
+    }
+    &::after{
+        content: '';
+    }
+    &--error{
+        background-color: red;
+    }
+    &--warning{
+        background-color: purple;
+        &:hover{
+            background-color: aquamarine;
+        }
+    }
 }
 
-.btn:hover{
-    background-color: darken($btn_bg, 50); //顏色内建
-    color: lighten($btn_font, 10);
 
+//偽元素
+a{
+    a:hover{
+        color: rgb(173, 0, 38);
+    }
+    &:active{
+        color:rgb(110, 200, 7)
+    }
+}
+
+// .btn:hover{
+//     background-color: darken($btn_bg, 50); //顏色内建
+//     color: lighten($btn_font, 10);
+// }
+
+// 巢狀寫法
+//css寫法
+section .wrapper h1{
+    font-size: 20px;
+}
+
+//scss寫法
+.container{
+    section{
+        .wrapper{
+            h1{
+                font-size: 20px;
+            }
+            h2{
+                font-size: 40px;
+            }
+            h3{
+                font-size: 60px;
+            }
+        }
+    }
 }
