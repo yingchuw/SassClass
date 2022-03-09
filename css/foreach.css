@@ -115,4 +115,40 @@
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
 }
+
+.img_banner {
+  background-image: url("image/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_product {
+  background-image: url("image/product.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_item {
+  background-image: url("image/item.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_store {
+  background-image: url("image/store.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=foreach.css.map */

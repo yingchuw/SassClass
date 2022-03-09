@@ -62,3 +62,20 @@
 }
 
 @include grid(12);
+
+
+// $img = 區域變數, $list = 要在外面先宣告
+$list: banner product item store;
+
+@each $img in $list {
+    .img_#{$img}{
+        background-image: url('image/#{$img}.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 1000px;
+        object-fit: cover;
+    }
+}
+
+
+
