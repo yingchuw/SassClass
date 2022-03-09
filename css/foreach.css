@@ -160,4 +160,41 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.spec {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #1c1c1c;
+}
+
+h2 {
+  font-size: 40px;
+  color: #1c1c1c;
+}
+
+h3 {
+  font-size: 18px;
+  color: #1c1c1c;
+}
+
+span {
+  font-size: 16px;
+  color: #1c1c1c;
+}
+
+a {
+  font-size: 14px;
+  color: #1c1c1c;
+}
+
+.black {
+  color: #1c1c1c;
+}
+
+.default {
+  color: #4c4c4c;
+}
 /*# sourceMappingURL=foreach.css.map */

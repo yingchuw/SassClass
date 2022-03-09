@@ -98,3 +98,41 @@
 @include img (store, jpeg);
 @include img (g1 g2 g3, gif);
 
+
+@mixin space ($val){
+    margin-top: 10px;
+}
+
+
+.spec {
+    @include space (10);
+}
+
+
+$title:(
+    'h1' : 60px,
+    'h2' : 40px,
+    'h3' : 18px,
+    'span' : 16px, 
+    'a' : 14px, 
+);
+
+
+@each $title, $val in $title{
+    #{$title}{
+        font-size: $val;
+        color: #1c1c1c;
+    }
+}
+
+$color : (
+    '.black' : #1c1c1c,
+    '.default' : #4c4c4c,
+);
+
+@each $class, $val in $color{
+    #{$class}{
+        color: $val;
+    }
+}
+
