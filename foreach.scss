@@ -64,18 +64,37 @@
 @include grid(12);
 
 
-// $img = 區域變數, $list = 要在外面先宣告
-$list: banner product item store;
 
-@each $img in $list {
-    .img_#{$img}{
-        background-image: url('image/#{$img}.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 1000px;
-        object-fit: cover;
+// $img = 區域變數, $list = 要在外面先宣告
+// $list: banner product item store;
+// // $list: banner, product, item, store; (逗號可寫可不寫)
+
+// @each $img in $list {
+//     .img_#{$img}{
+//         background-image: url('image/#{$img}.jpg');
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         width: 1000px;
+//         object-fit: cover;
+//     }
+// }
+
+
+// @each 用mixin寫法
+
+@mixin img($list, $style){
+    @each $img in $list {
+        .img_#{$img}{
+            background-image: url('image/#{$img}.#{$style}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 1000px;
+            object-fit: cover;
+        }
     }
 }
 
-
+@include img (banner, png);
+@include img (store, jpeg);
+@include img (g1 g2 g3, gif);
 
