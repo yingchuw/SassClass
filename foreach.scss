@@ -19,7 +19,7 @@
 //     }
 // }
 
-// 往左邊推
+// 往右邊推
 @mixin push($num) {
     @for $i from 1 through $num{
         .push_left_#{$i}{
@@ -29,4 +29,36 @@
     } 
 }
 
-@include push(10);
+// 往下推
+@mixin push_top($num) {
+    @for $i from 1 through $num{
+        .push_left_#{$i}{
+            position: relative;
+            left: $i * 1px;
+        }
+    } 
+}
+
+// @include push(100);
+// @include push_top(100);
+
+
+// grid
+// @for $i from 1 through 12 {
+//     .col-#{$i}{
+//         // max-width: ($i / 12) * 100%;
+//         flex: 0 0 ($i / 12) * 100%; // bootstrap 的寫法
+//     }
+// }
+
+// grid 用@mixin包起來寫法
+@mixin grid($num){
+    @for $i from 1 through $num {
+        .col-#{$i}{
+            // max-width: ($i / $num) * 100%;
+            flex: 0 0 ($i / $num) * 100%; // bootstrap 的寫法
+        }
+    } 
+}
+
+@include grid(12);
