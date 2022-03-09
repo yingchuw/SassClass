@@ -43,7 +43,7 @@
 };
 @include body(black);
 
-// null : 
+
 @mixin btn_default($w, $btn_bg, $border_radius:null){ 
     width: 100px;
     padding: $w;
@@ -53,9 +53,25 @@
     transition: .3s all ease;
     border-radius: $border_radius;
     color: invert($btn_bg); // 反轉
+    box-sizing: border-box;
+    @if border != null{
+        border: 1px solid whitesmoke;
+    }
     @content; //可以塞屬性跟class的寫法
     &:hover{
         background-color: lighten($btn_bg, 20); // 顏色內建
+    }
+}
+
+@mixin btn_outline($w, $color, $border-radius:null){
+    widows: 100%;
+    padding: $w;
+    text-align: center;
+    border: 1px solid yellow;
+    transition: .3s all ease;    
+    &:hover{
+    border: null;
+    background-color: $color;
     }
 }
 
@@ -89,8 +105,8 @@
 
 //定義每個區塊的寬高
 @include layout(main, 1200px); //有給值寬鳩會吃這個值
-@include layout(banner); //不給值就是滿版
-@include layout(product){
+@include layout(banner, 1200px); //不給值就是滿版
+@include layout(product, 1200px){
     background-color: whitesmoke;
 
 }; //不給值就是滿版, 然後可以加入自定義的屬性

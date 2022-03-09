@@ -1,0 +1,32 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+}
+
+
+// for 變數 from 起始值 到 結束值 (包含結束值)
+@for $i from 1 through 10{
+    .title #{$i} {
+        font-size: $i * 1px;
+    }
+}
+
+// for 變數 from 起始值 到 結束值 (不含結束值)
+// @for $i from 1 to 10{
+//     .title #{$i} {
+//         font-size: $i * 1px;
+//     }
+// }
+
+// 往左邊推
+@mixin push($num) {
+    @for $i from 1 through $num{
+        .push_left_#{$i}{
+            position: relative;
+            left: $i * 1px;
+        }
+    } 
+}
+
+@include push(10);

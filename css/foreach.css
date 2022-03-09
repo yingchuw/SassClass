@@ -1,0 +1,96 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: darkcyan;
+}
+
+.title 1 {
+  font-size: 1px;
+}
+
+.title 2 {
+  font-size: 2px;
+}
+
+.title 3 {
+  font-size: 3px;
+}
+
+.title 4 {
+  font-size: 4px;
+}
+
+.title 5 {
+  font-size: 5px;
+}
+
+.title 6 {
+  font-size: 6px;
+}
+
+.title 7 {
+  font-size: 7px;
+}
+
+.title 8 {
+  font-size: 8px;
+}
+
+.title 9 {
+  font-size: 9px;
+}
+
+.title 10 {
+  font-size: 10px;
+}
+
+.push_left_1 {
+  position: relative;
+  left: 1px;
+}
+
+.push_left_2 {
+  position: relative;
+  left: 2px;
+}
+
+.push_left_3 {
+  position: relative;
+  left: 3px;
+}
+
+.push_left_4 {
+  position: relative;
+  left: 4px;
+}
+
+.push_left_5 {
+  position: relative;
+  left: 5px;
+}
+
+.push_left_6 {
+  position: relative;
+  left: 6px;
+}
+
+.push_left_7 {
+  position: relative;
+  left: 7px;
+}
+
+.push_left_8 {
+  position: relative;
+  left: 8px;
+}
+
+.push_left_9 {
+  position: relative;
+  left: 9px;
+}
+
+.push_left_10 {
+  position: relative;
+  left: 10px;
+}
+/*# sourceMappingURL=foreach.css.map */

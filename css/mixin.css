@@ -42,6 +42,9 @@ body {
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
   color: #057f8d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid whitesmoke;
   -webkit-box-shadow: 10px 10px 20px #8c8c8c;
           box-shadow: 10px 10px 20px #8c8c8c;
   margin: 10px;
@@ -61,6 +64,9 @@ body {
   transition: .3s all ease;
   border-radius: 5px;
   color: #464646;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid whitesmoke;
 }
 
 .btn_cancel:hover {
@@ -69,6 +75,20 @@ body {
 
 .main {
   width: 1200px;
+  height: 100vh;
   margin: 0 auto;
+}
+
+.banner {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.product {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: whitesmoke;
 }
 /*# sourceMappingURL=mixin.css.map */
