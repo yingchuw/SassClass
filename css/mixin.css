@@ -32,4 +32,43 @@ body {
   background-color: black;
   font-size: 16px;
 }
+
+.btn_summit {
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  background-color: salmon;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  color: #057f8d;
+  -webkit-box-shadow: 10px 10px 20px #8c8c8c;
+          box-shadow: 10px 10px 20px #8c8c8c;
+  margin: 10px;
+}
+
+.btn_summit:hover {
+  background-color: #fdd9d5;
+}
+
+.btn_cancel {
+  width: 100px;
+  padding: 15px;
+  text-align: center;
+  background-color: #b9b9b9;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  border-radius: 5px;
+  color: #464646;
+}
+
+.btn_cancel:hover {
+  background-color: #ececec;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=mixin.css.map */
